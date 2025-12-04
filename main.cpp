@@ -150,8 +150,8 @@ void convertToPixels(const vector<vector<rgb>>& image, int width, int height, ve
     }
 }
 
-const int WIDTH = 500;
-const int HEIGHT = 500;
+const int WIDTH = 64;
+const int HEIGHT = 64;
 
 int generateImage(const vector<vector<rgb>>& image)
 {
@@ -449,9 +449,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 int main()
 {
 
-    Sphere s1 = Sphere(rgb(1, 0, 0), Vector(0, 5, 2), 1.0, true, 0.1);  // Red sphere (will be animated)
-    Sphere s2 = Sphere(rgb(0, 1, 0), Vector(2, 9, 0), 2.0, true, 0.3);   // Green sphere (static)
-    Sphere s3 = Sphere(rgb(0, 0, 1), Vector(-2, 25, 0), 1.5, true, .2);  // Blue sphere (static)
+    Sphere s1 = Sphere(rgb(1, 0, 0), Vector(0, 5, 0), 1.0, true, 0.1);  // Red sphere
+    // Sphere s2 = Sphere(rgb(0, 1, 0), Vector(2, 9, 0), 2.0, true, 0.3);   // Green sphere (static)
+    // Sphere s3 = Sphere(rgb(0, 0, 1), Vector(-2, 25, 0), 1.5, true, .2);  // Blue sphere (static)
 
     vector<Tetrahedron> tetrahedrons;
     Tetrahedron t1 = Tetrahedron(
@@ -463,7 +463,7 @@ int main()
     true,
     0.4f
 );
-    tetrahedrons.push_back(t1);
+    // tetrahedrons.push_back(t1);
 
     Tetrahedron t2 = Tetrahedron(
         Vector(2, 1, -7),   // v0
@@ -474,14 +474,14 @@ int main()
         true,
         0.3f
     );
-    tetrahedrons.push_back(t2);
-    Camera camera = Camera(Vector(0, 6, 0), Vector(0,3, -1), Vector(0, 0, 1)); //Angle towards spheres
+    // tetrahedrons.push_back(t2);
+    Camera camera = Camera(Vector(0, 1, 0), Vector(0,0, 0), Vector(0, 0, 1)); //Angle towards spheres
     //Camera camera = Camera(Vector(0,3,-5), Vector(0,3,0), Vector(0,1,0));
 
 
 
     int windowSize = 512;
-    int imageSize = 256;
+    int imageSize = 128;
     vector<vector<rgb>> image(imageSize, std::vector<rgb>(imageSize));
 
     if (!glfwInit())
@@ -504,10 +504,10 @@ int main()
         return -1;
     }
 
-    float time = 0.0f;
-    float deltaTime = 0.1f;
+    // float time = 0.0f;
+    // float deltaTime = 0.1f;
 
-    Vector lightCenter = Vector(0, 6, 0);
+    Vector lightCenter = Vector(10, 0, 0);
     float lightRadius = 8.0f;
 
 
@@ -517,24 +517,27 @@ int main()
     while (!glfwWindowShouldClose(window))
     {
         // Update time
-        time += deltaTime;
+        // time += deltaTime;
 
-        Vector lightPos = Vector(
-            lightCenter.x + lightRadius * cos(time),
-            lightCenter.y + lightRadius * sin(time),
-            lightCenter.z
-        );
 
-        Vector redSpherePos = Vector(
-            sphereCenter.x + sphereRadius * cos(time * 0.7f),
-            sphereCenter.y,
-            sphereCenter.z + sphereRadius * sin(time * 0.7f)
-        );
+        Vector lightPos = lightCenter;
+
+        // Vector lightPos = Vector(
+        //     lightCenter.x + lightRadius * cos(time),
+        //     lightCenter.y + lightRadius * sin(time),
+        //     lightCenter.z
+        // );
+        //
+        // Vector redSpherePos = Vector(
+        //     sphereCenter.x + sphereRadius * cos(time * 0.7f),
+        //     sphereCenter.y,
+        //     sphereCenter.z + sphereRadius * sin(time * 0.7f)
+        // );
         glfwSetKeyCallback(window, key_callback);
 
-        s1.center = redSpherePos;
+        // s1.center = redSpherePos;
 
-        vector<Sphere> objects = {s2, s3, s1};
+        vector<Sphere> objects = {s1};
 
         for (int i = 0; i < imageSize; i++)
         {
