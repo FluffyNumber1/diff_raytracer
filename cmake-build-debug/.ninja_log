@@ -1,4 +1,15 @@
 # ninja log v6
-16	347	7783544198066020	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
-2	273	7783559540702957	build.ninja	95e2a510d8758405
-347	470	7783544201372838	raytracer.exe	1aad71b0e3e1ee21
+4	805	7796770237625546	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+806	995	7796770245652036	raytracer.exe	1aad71b0e3e1ee21
+35	635	7792308220658769	build.ninja	95e2a510d8758405
+8	350	7783692410202263	CMakeFiles/raytracer.dir/simpleTexture.cpp.obj	6357419e9b726c45
+4	738	7796791759933905	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+739	947	7796791767273684	raytracer.exe	1aad71b0e3e1ee21
+4	775	7796797398005216	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+775	949	7796797405728488	raytracer.exe	1aad71b0e3e1ee21
+31	753	7796797481400844	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+753	945	7796797488628016	raytracer.exe	1aad71b0e3e1ee21
+36	726	7796801753833336	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+726	929	7796801760738850	raytracer.exe	1aad71b0e3e1ee21
+38	731	7796801900068189	CMakeFiles/raytracer.dir/main.cpp.obj	d4548c2bc20e3a23
+731	902	7796801907004741	raytracer.exe	1aad71b0e3e1ee21

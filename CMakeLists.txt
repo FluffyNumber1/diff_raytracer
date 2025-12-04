@@ -3,9 +3,10 @@ project(raytracer)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(raytracer main.cpp simpleTexture.cpp)
+add_executable(raytracer main.cpp)
 
 # GLEW & GLFW directories
+#Edit the following directories to the location on your system
 set(GLEW_DIR "C:/Users/nadan/glew-2.1.0")
 set(GLFW_DIR "C:/Users/nadan/glfw-3.4.bin.WIN64")
 

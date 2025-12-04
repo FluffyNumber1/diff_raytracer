@@ -38,7 +38,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "}\n\0";
     
 
-int main()
+int main2()
 {
     // glfw: initialize and configure
     // ------------------------------
@@ -157,8 +157,8 @@ int main()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 
     // Create the image (RGB Array) to be displayed
-    const int width  = 4; // keep it in powers of 2!
-    const int height = 4; // keep it in powers of 2!
+    const int width  = 512; // keep it in powers of 2!
+    const int height = 512; // keep it in powers of 2!
     unsigned char image[width*height*3];
     for(int i = 0; i < height; i++)
     {

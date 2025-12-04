@@ -56,13 +56,6 @@ build CMakeFiles/raytracer.dir/main.cpp.obj: CXX_COMPILER__raytracer_unscanned_D
   OBJECT_DIR = CMakeFiles\raytracer.dir
   OBJECT_FILE_DIR = CMakeFiles\raytracer.dir
 
-build CMakeFiles/raytracer.dir/simpleTexture.cpp.obj: CXX_COMPILER__raytracer_unscanned_Debug C$:/Users/nadan/CLionProjects/raytracer/simpleTexture.cpp || cmake_object_order_depends_target_raytracer
-  DEP_FILE = CMakeFiles\raytracer.dir\simpleTexture.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/nadan/CLionProjects/raytracer/raytracer -IC:/Users/nadan/glfw-3.4.bin.WIN64/include -IC:/Users/nadan/glew-2.1.0/include
-  OBJECT_DIR = CMakeFiles\raytracer.dir
-  OBJECT_FILE_DIR = CMakeFiles\raytracer.dir
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target raytracer
@@ -71,7 +64,7 @@ build CMakeFiles/raytracer.dir/simpleTexture.cpp.obj: CXX_COMPILER__raytracer_un
 #############################################
 # Link the executable raytracer.exe
 
-build raytracer.exe: CXX_EXECUTABLE_LINKER__raytracer_Debug CMakeFiles/raytracer.dir/main.cpp.obj CMakeFiles/raytracer.dir/simpleTexture.cpp.obj | C$:/Users/nadan/glfw-3.4.bin.WIN64/lib-mingw-w64/libglfw3.a C$:/Users/nadan/glew-2.1.0/lib/Release/x64/glew32.lib
+build raytracer.exe: CXX_EXECUTABLE_LINKER__raytracer_Debug CMakeFiles/raytracer.dir/main.cpp.obj | C$:/Users/nadan/glfw-3.4.bin.WIN64/lib-mingw-w64/libglfw3.a C$:/Users/nadan/glew-2.1.0/lib/Release/x64/glew32.lib
   FLAGS = -g
   LINK_LIBRARIES = -lopengl32  C:/Users/nadan/glfw-3.4.bin.WIN64/lib-mingw-w64/libglfw3.a  C:/Users/nadan/glew-2.1.0/lib/Release/x64/glew32.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\raytracer.dir
